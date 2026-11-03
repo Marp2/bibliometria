@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentacion tecnica | Bibliometria IA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="docs">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand">Bibliometria: analisis de algoritmos<small>Universidad del Quindio - 2026-2 - corpus: 20 articulos sobre IA en educacion</small></div>
+      <nav class="nav" aria-label="Modulos">
+        <a data-m="corpus" href="/ui/corpus">Corpus</a>
+        <a data-m="similarity" href="/ui/similarity">1. Similitud</a>
+        <a data-m="clustering" href="/ui/clustering">2. Clustering</a>
+        <a data-m="patterns" href="/ui/patterns">3. Patrones</a>
+        <a data-m="docs" href="/ui/docs">Documentacion</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <p class="lead">Requerimiento 4</p>
+      <h1>Documentacion tecnica</h1>
+    </section>
+    <div id="estado" class="status" hidden></div>
+    <section class="panel"><h2>Descargas</h2>
+      <div class="row"><a class="btn" href="/report/docx">Documento tecnico (Word)</a><a class="btn secondary" href="/report/pdf">PDF</a><a class="btn secondary" href="/report/md">Markdown</a><a class="btn secondary" href="/report/guia">Guia de sustentacion</a></div>
+    </section>
+    <section class="panel"><h2>Algoritmos implementados y su complejidad</h2><div id="tabla-algoritmos"></div></section>
+    <section class="panel"><h2>Endpoints</h2>
+<pre>GET  /health
+GET  /api/corpus            GET /api/corpus/&lt;id&gt;       GET /api/corpus/calidad
+POST /api/similarity        {"ids":[2,6]}
+GET  /api/similarity/detalle?a=2&amp;b=6
+GET  /api/clustering/comparar        GET /api/clustering/grupos?criterio=average&amp;k=3
+GET  /plot/dendrogram.png?criterio=single|complete|average&amp;k=3
+GET  /api/patterns/search?patron=assessment&amp;algoritmo=todos|kmp|boyer-moore|rabin-karp
+GET  /api/patterns/benchmark?patron=assessment
+GET  /plot/patterns.png?patron=assessment&amp;doc=16&amp;algoritmo=boyer-moore</pre>
+    </section>
+  </main>
+  <footer>Algoritmos implementados desde cero (sin scipy, sklearn, numpy ni funciones de busqueda nativas).</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

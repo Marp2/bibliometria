@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Similitud textual (4 clasicos + 2 con IA) | Bibliometria IA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="similarity">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand">Bibliometria: analisis de algoritmos<small>Universidad del Quindio - 2026-2 - corpus: 20 articulos sobre IA en educacion</small></div>
+      <nav class="nav" aria-label="Modulos">
+        <a data-m="corpus" href="/ui/corpus">Corpus</a>
+        <a data-m="similarity" href="/ui/similarity">1. Similitud</a>
+        <a data-m="clustering" href="/ui/clustering">2. Clustering</a>
+        <a data-m="patterns" href="/ui/patterns">3. Patrones</a>
+        <a data-m="docs" href="/ui/docs">Documentacion</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <p class="lead">Requerimiento 1</p>
+      <h1>Similitud textual (4 clasicos + 2 con IA)</h1>
+    </section>
+    <div id="estado" class="status" hidden></div>
+    <section class="panel">
+      <h2>1. Elija de 2 a 6 articulos</h2>
+      <div id="lista-articulos" style="max-height:330px; overflow:auto"></div>
+      <div class="row" style="margin-top:10px"><button id="btn-comparar" disabled>Comparar abstracts</button><span id="contador" class="muted"></span></div>
+    </section>
+    <div id="resultado" class="grid"></div>
+  </main>
+  <footer>Algoritmos implementados desde cero (sin scipy, sklearn, numpy ni funciones de busqueda nativas).</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

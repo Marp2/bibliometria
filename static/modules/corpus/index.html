@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corpus y preprocesamiento | Bibliometria IA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="corpus">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand">Bibliometria: analisis de algoritmos<small>Universidad del Quindio - 2026-2 - corpus: 20 articulos sobre IA en educacion</small></div>
+      <nav class="nav" aria-label="Modulos">
+        <a data-m="corpus" href="/ui/corpus">Corpus</a>
+        <a data-m="similarity" href="/ui/similarity">1. Similitud</a>
+        <a data-m="clustering" href="/ui/clustering">2. Clustering</a>
+        <a data-m="patterns" href="/ui/patterns">3. Patrones</a>
+        <a data-m="docs" href="/ui/docs">Documentacion</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <p class="lead">Requisito previo: fuente de informacion</p>
+      <h1>Corpus y preprocesamiento</h1>
+    </section>
+    <div id="estado" class="status" hidden></div>
+    <section class="panel">
+      <div class="metrics">
+        <div class="metric"><span>Articulos</span><strong id="m-articulos">-</strong></div>
+        <div class="metric"><span>Abstracts validados</span><strong id="m-ok">-</strong></div>
+        <div class="metric"><span>Vocabulario (con stemming)</span><strong id="m-vocab">-</strong></div>
+        <div class="metric"><span>Embeddings cargados</span><strong id="m-modelos" style="font-size:15px">-</strong></div>
+      </div>
+    </section>
+    <section class="panel"><h2>Los 20 articulos</h2><p class="muted">Haga clic en una fila para ver su abstract y el preprocesamiento paso a paso.</p><div id="tabla-corpus"></div></section>
+    <section class="panel" id="detalle-doc"><p class="muted">Seleccione un articulo de la tabla.</p></section>
+    <section class="panel"><h2>Reporte de calidad de la extraccion</h2><p class="muted">Longitud, residuos (citas, palabras clave), guiones de fin de linea y concordancia con una extraccion independiente.</p><div id="tabla-calidad"></div></section>
+    <section class="panel"><h2>Probar el preprocesamiento con su propio texto</h2>
+      <textarea id="texto-prep" placeholder="Escriba o pegue un texto en ingles o espanol...">The Learners' Education: AI-driven assessments (2023) were studied.</textarea>
+      <div class="row" style="margin-top:8px"><label class="chk"><input type="checkbox" id="chk-stem" checked> Aplicar stemming</label><button id="btn-prep">Preprocesar</button></div>
+      <div id="estado-prep" class="status" hidden></div><div id="salida-prep"></div>
+    </section>
+  </main>
+  <footer>Algoritmos implementados desde cero (sin scipy, sklearn, numpy ni funciones de busqueda nativas).</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

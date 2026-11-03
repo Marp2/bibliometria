@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busqueda de patrones: KMP, Boyer-Moore y Rabin-Karp | Bibliometria IA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="patterns">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand">Bibliometria: analisis de algoritmos<small>Universidad del Quindio - 2026-2 - corpus: 20 articulos sobre IA en educacion</small></div>
+      <nav class="nav" aria-label="Modulos">
+        <a data-m="corpus" href="/ui/corpus">Corpus</a>
+        <a data-m="similarity" href="/ui/similarity">1. Similitud</a>
+        <a data-m="clustering" href="/ui/clustering">2. Clustering</a>
+        <a data-m="patterns" href="/ui/patterns">3. Patrones</a>
+        <a data-m="docs" href="/ui/docs">Documentacion</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <p class="lead">Requerimiento 3</p>
+      <h1>Busqueda de patrones: KMP, Boyer-Moore y Rabin-Karp</h1>
+    </section>
+    <div id="estado" class="status" hidden></div>
+    <section class="panel">
+      <h2>Buscar un patron en los 20 abstracts</h2>
+      <div class="row">
+        <div class="grow"><input type="text" id="patron" value="assessment" placeholder="Ej.: assessment, learning, ChatGPT" maxlength="200"></div>
+        <select id="alg" style="max-width:220px"><option value="todos">Los tres (comparar)</option><option value="kmp">KMP</option><option value="boyer-moore">Boyer-Moore</option><option value="rabin-karp">Rabin-Karp</option></select>
+        <label class="chk"><input type="checkbox" id="may"> Distinguir mayusculas</label>
+        <button id="btn-buscar">Buscar</button>
+      </div>
+    </section>
+    <div id="resultado" class="grid"></div>
+    <section class="panel"><h2>Tiempos reales vs complejidad teorica</h2>
+      <p class="muted">Mide preprocesamiento y busqueda por separado, la escalabilidad con el tamano del texto y casos limite sinteticos.</p>
+      <button id="btn-bench" class="secondary">Medir tiempos con el patron actual</button>
+      <div id="estado-bench" class="status" hidden></div><div id="bench"></div>
+    </section>
+  </main>
+  <footer>Algoritmos implementados desde cero (sin scipy, sklearn, numpy ni funciones de busqueda nativas).</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

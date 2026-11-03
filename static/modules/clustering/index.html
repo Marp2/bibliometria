@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clustering jerarquico y dendrogramas | Bibliometria IA</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body data-page="clustering">
+  <header class="topbar">
+    <div class="topbar-in">
+      <div class="brand">Bibliometria: analisis de algoritmos<small>Universidad del Quindio - 2026-2 - corpus: 20 articulos sobre IA en educacion</small></div>
+      <nav class="nav" aria-label="Modulos">
+        <a data-m="corpus" href="/ui/corpus">Corpus</a>
+        <a data-m="similarity" href="/ui/similarity">1. Similitud</a>
+        <a data-m="clustering" href="/ui/clustering">2. Clustering</a>
+        <a data-m="patterns" href="/ui/patterns">3. Patrones</a>
+        <a data-m="docs" href="/ui/docs">Documentacion</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section>
+      <p class="lead">Requerimiento 2</p>
+      <h1>Clustering jerarquico y dendrogramas</h1>
+    </section>
+    <div id="estado" class="status" hidden></div>
+    <section class="panel"><h2>Evaluacion de los tres criterios de enlace</h2>
+      <div id="tabla-metricas"></div>
+      <p id="conclusion" class="conclusion"></p>
+      <p><img id="img-metricas" class="plot" alt="Correlacion cofenetica y silueta por criterio"></p>
+    </section>
+    <section class="panel"><h2>Dendrograma</h2>
+      <div class="pill-tabs" id="tabs-crit"></div>
+      <div class="row"><label for="rng-k">Cortar el arbol en k = <b id="lbl-k">3</b> grupos</label><input id="rng-k" type="range" min="2" max="8" value="3" style="max-width:260px"></div>
+      <p><img id="img-dendro" class="plot" alt="Dendrograma"></p>
+      <div id="grupos"></div>
+      <details><summary>Historial de fusiones (19 pasos)</summary><div id="historial"></div></details>
+    </section>
+  </main>
+  <footer>Algoritmos implementados desde cero (sin scipy, sklearn, numpy ni funciones de busqueda nativas).</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
