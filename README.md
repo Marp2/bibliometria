@@ -5,7 +5,7 @@ Dominio: inteligencia artificial generativa / IA en educacion. Corpus: 20 articu
 
 Integrantes: Cristhian Camilo Lopez Grajales, Mariana Pineda Montenegro y Camila Hernandez Pena.
 
-**Aplicacion desplegada:** `ENLACE_PUBLICO_DE_RENDER` (reemplazar al desplegar)
+**Aplicacion desplegada:** `https://bibliometria-algoritmos-gp0j.onrender.com/ui/corpus` 
 
 ## Que incluye
 
