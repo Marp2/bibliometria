@@ -81,5 +81,3 @@ docs/      DOCUMENTO_TECNICO_FINAL (.md .docx .pdf), DOCUMENTACION_TECNICA, GUIA
 ## Documentacion
 
 - `docs/DOCUMENTO_TECNICO_FINAL.docx` / `.pdf` / `.md`: documento tecnico (arquitectura, casos de estudio, resultados, IA declarada).
-- `docs/GUIA_SUSTENTACION_PROYECTO.md`: preguntas tipicas y respuestas cortas.
-- `docs/HOJA_DE_RUTA_COMPLETA.md`: lista de verificacion contra el enunciado y pendientes del grupo.
