@@ -69,4 +69,4 @@ docs/      DOCUMENTO_TECNICO_FINAL (.md .docx .pdf), DOCUMENTACION_TECNICA, GUIA
 
 ## Documentacion
 
-- `docs/DOCUMENTO_TECNICO_FINAL.docx` / `.pdf` / `.md`: documento tecnico (arquitectura, casos de estudio, resultados, IA declarada).
+- `docs/DOCUMENTO_TECNICO_FINAL.pdf`: documento tecnico (arquitectura, casos de estudio, resultados, IA declarada).
