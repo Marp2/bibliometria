@@ -38,17 +38,6 @@ En macOS / Linux: `python3 -m venv .venv && source .venv/bin/activate`, y los mi
 
 Solo para ejecutar la app basta `pip install -r requirements.txt` (Flask, matplotlib, gunicorn).
 
-## Desplegar en Render (plan gratuito)
-
-1. Suba esta carpeta a un repositorio de GitHub (`git init`, `git add .`, `git commit -m "proyecto"`, `git remote add origin <url>`, `git push -u origin main`). `pdfs/` y `data/modelos_cache/` ya estan en `.gitignore`.
-2. En https://render.com: **New > Web Service** y conecte el repositorio (o **New > Blueprint** para usar `render.yaml`).
-3. Si lo hace manualmente: *Runtime* Python 3, *Build Command* `pip install -r requirements.txt`, *Start Command* `gunicorn src.api:app --bind 0.0.0.0:$PORT --workers 1 --timeout 120`, *Plan* Free.
-4. Cuando termine, abra `<url>/health`: debe responder `{"status":"ok","articulos":20,...}`.
-5. Copie la URL publica en este README y en `docs/` (reemplazando `ENLACE_PUBLICO_DE_RENDER`) y vuelva a ejecutar `python scripts/generar_documentos.py`.
-
-Variables de entorno opcionales: `BIBLIO_DATA_DIR` (carpeta `data`), `BIBLIO_REPORTS_DIR`; si la carpeta no se puede escribir, se usa una temporal.
-El plan gratuito "duerme" tras inactividad: la primera consulta puede tardar. Comparar 6 articulos (15 pares) es el calculo mas pesado.
-
 ## Regenerar datos y documentos (opcional)
 
 ```powershell
