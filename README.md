@@ -3,7 +3,7 @@
 Proyecto final de **Analisis de Algoritmos** (Universidad del Quindio, 2026-2).
 Dominio: inteligencia artificial generativa / IA en educacion. Corpus: 20 articulos cientificos; se procesa **solo el abstract**.
 
-Integrantes: Cristhian Camilo Lopez Grajales, Mariana Pineda Montenegro y Camila Hernandez Pena.
+Integrantes: Cristhian Camilo Lopez Grajales, Mariana Pineda Montenegro y Camila Hernandez Peña.
 
 **Aplicacion desplegada:** `https://bibliometria-algoritmos-gp0j.onrender.com/ui/corpus` 
 
